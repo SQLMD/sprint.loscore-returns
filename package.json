@@ -1,0 +1,31 @@
+{
+  "name": "sprint.loscore-returns",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "LoScore Returns to Haunt You",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test karma start && yarn lint",
+    "lint": "eslint --fix --ext .js src spec",
+    "precommit": "pretty-quick --staged"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-junit-reporter": "^1.2.0",
+    "prettier": "^1.11.1",
+    "pretty-quick": "^1.4.1",
+    "puppeteer": "^1.2.0"
+  },
+  "engines": {
+    "node": "^9.10.0",
+    "yarn": "^1.5.0"
+  },
+  "author": "Mike Donnelly <sqldonnelly@gmail.com>"
+}
