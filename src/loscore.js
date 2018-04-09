@@ -53,7 +53,14 @@
     return result;
   };
 
-  _.reject = (collection, test) => {};
+  _.reject = (collection, test) => {
+    return _.filter(collection, (value) => {
+      if (test(value)) {
+        return false;
+      }
+      return true;
+    });
+  };
 
   _.reduce = (collection, iterator, accumulator) => {
     // YOUR CODE HERE
