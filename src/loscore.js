@@ -97,8 +97,17 @@
   |~~~~~~~~~~
   * */
 
-  _.extend = function(obj) {
+  _.extend = function() {
     // YOUR CODE HERE
+    let obj, objs;
+    [obj, ...objs] = arguments;
+    _.each(objs, (objToExtend) => {
+      _.each(objToExtend, (item, key) => {
+        obj[key] = item;
+      });
+    });
+
+    return obj;
   };
 
   /**
