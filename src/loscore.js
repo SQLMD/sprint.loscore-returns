@@ -77,8 +77,19 @@
     return result;
   };
 
-  _.every = function(/* Your Arguments Here */) {
-    // YOUR CODE HERE
+  _.every = function(collection, test) {
+    // YOUR CODE
+    if (test == undefined || collection.length == 0) {
+      return true;
+    }
+    let result = _.reduce(collection, (accumlator, current) => {
+      if (accumlator && test(current)) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    return result;
   };
 
   /**
