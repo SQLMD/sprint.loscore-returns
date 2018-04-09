@@ -117,6 +117,14 @@
 
   _.once = function(func) {
     // YOUR CODE HERE
+    let check = true;
+    const once = () => {
+      if (check) {
+        func();
+      }
+      check = false;
+    };
+    return once;
   };
 
   _.memoize = function(func) {
