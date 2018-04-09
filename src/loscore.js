@@ -142,6 +142,11 @@
 
   _.invoke = function(collection, functionOrKey) {
     // YOUR CODE HERE
+
+    if (typeof functionOrKey == "function") {
+      return _.map(collection, (item) => functionOrKey.apply(item));
+    }
+    return _.map(collection, (item) => item[functionOrKey].apply(item));
   };
 
   /**
