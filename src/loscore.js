@@ -64,6 +64,17 @@
 
   _.reduce = (collection, iterator, accumulator) => {
     // YOUR CODE HERE
+    let newCollection = collection;
+    let result;
+    if (accumulator == undefined) {
+      [result, ...newCollection] = newCollection;
+    } else {
+      result = accumulator;
+    }
+    _.each(newCollection, (item) => {
+      result = iterator(result, item);
+    });
+    return result;
   };
 
   _.every = function(/* Your Arguments Here */) {
