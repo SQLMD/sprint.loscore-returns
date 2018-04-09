@@ -129,6 +129,15 @@
 
   _.memoize = function(func) {
     // YOUR CODE HERE
+    let cache = {};
+    const cachedFunc = (...args) => {
+      const strArgs = JSON.stringify(...args);
+      if (!cache.hasOwnProperty(strArgs)) {
+        cache[strArgs] = func(...args);
+      }
+      return cache[strArgs];
+    };
+    return cachedFunc;
   };
 
   _.invoke = function(collection, functionOrKey) {
