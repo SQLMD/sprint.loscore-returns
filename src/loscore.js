@@ -11,6 +11,13 @@
 
   _.uniq = (array) => {
     // YOUR CODE HERE
+    let uniqArray = [];
+    for (let i = 0; i < array.length; i++) {
+      if (!uniqArray.includes(array[i])) {
+        uniqArray.push(array[i]);
+      }
+    }
+    return uniqArray;
   };
 
   /**
